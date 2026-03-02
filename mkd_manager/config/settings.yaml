@@ -1,0 +1,20 @@
+# Настройки приложения МКД-Менеджер
+
+app:
+  name: "МКД-Менеджер"
+  version: "1.0.0"
+  debug: true
+
+database:
+  url: "sqlite:////workspace/mkd_manager/database/mkd.db"
+  echo: false
+
+paths:
+  database: "/workspace/mkd_manager/database/mkd.db"
+  reports: "./reports/"
+  templates: "./reports/templates/"
+
+defaults:
+  work_periodicity: "ежегодно"
+  work_priority: 1
+  work_status: "planned"
