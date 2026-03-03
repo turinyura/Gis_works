@@ -23,12 +23,26 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("МКД-Менеджер")
         self.setGeometry(100, 100, 1200, 800)
         
+        # Применяем стили
+        self.apply_styles()
+        
         # Устанавливаем центральный виджет
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
         
         # Создаем макет для центрального виджета
         layout = QVBoxLayout(self.central_widget)
+    
+    def apply_styles(self):
+        """Применение стилей к интерфейсу"""
+        try:
+            with open('/workspace/mkd_manager/gui/styles.css', 'r', encoding='utf-8') as f:
+                style_sheet = f.read()
+            self.setStyleSheet(style_sheet)
+        except FileNotFoundError:
+            print("Файл стилей styles.css не найден")
+        except Exception as e:
+            print(f"Ошибка при загрузке стилей: {e}")
         
         # Создаем вкладки
         self.tab_widget = QTabWidget()
