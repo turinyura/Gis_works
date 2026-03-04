@@ -1,6 +1,6 @@
 # MKD Manager
 
-MKD Manager is a software application designed to manage MKD (Medical Knowledge Database) systems.
+MKD Manager is a software application designed to manage MKD systems.
 
 ## Project Structure
 
